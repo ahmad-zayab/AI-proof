@@ -3,9 +3,13 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Card, Button } from '@/components/ui';
 import { decodeResultsFromUrl } from '@/lib/scoring';
+import { CATEGORIES } from '@/lib/quiz-data';
 import { QuizResult } from '@/types';
+import { ScoreGauge, RadarChart, CategoryBreakdown, ShareCard } from '@/components/results';
+import styles from './page.module.css';
 
 function ResultsContent() {
   const searchParams = useSearchParams();
@@ -18,20 +22,25 @@ function ResultsContent() {
     // Simulate a brief loading state for UX before decoding
     const timer = setTimeout(() => {
       if (dataStr) {
-        setResult(decodeResultsFromUrl(dataStr));
+        const decoded = decodeResultsFromUrl(dataStr);
+        setResult(decoded);
+        if (decoded) {
+          // Dynamic SEO Title Update
+          document.title = `My AI-Proof Score: ${Math.round(decoded.overallScore)}/100 | AI-Proof Engineer`;
+        }
       } else {
         setResult(null);
       }
       setIsLoading(false);
-    }, 600); // 600ms loading simulation
+    }, 600);
 
     return () => clearTimeout(timer);
   }, [dataStr]);
 
   if (isLoading) {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '40vh' }}>
-        <p style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--text-lg)', animation: 'pulse 2s infinite' }}>
+      <div className={styles.loadingContainer}>
+        <p className={styles.loadingText}>
           Loading your personalized results...
         </p>
       </div>
@@ -40,43 +49,101 @@ function ResultsContent() {
 
   if (!result) {
     return (
-      <Card variant="outline" style={{ borderColor: 'var(--color-danger)', maxWidth: '600px', margin: '0 auto', textAlign: 'center', padding: 'var(--space-3xl)' }}>
-        <h1 style={{ color: 'var(--color-danger)', marginBottom: 'var(--space-md)' }}>Invalid Results</h1>
-        <p style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--space-2xl)' }}>
-          This results link appears to be invalid or tampered with. Please retake the quiz for accurate results.
-        </p>
-        <Link href="/quiz" style={{ textDecoration: 'none', display: 'inline-block' }}>
-          <Button variant="primary">Retake the Quiz</Button>
-        </Link>
-      </Card>
+      <div className={styles.errorContainer}>
+        <Card variant="outline" className={styles.errorCard}>
+          <h1 className={styles.errorTitle}>Invalid Results</h1>
+          <p className={styles.errorDesc}>
+            This results link appears to be invalid or tampered with. Please retake the quiz for accurate results.
+          </p>
+          <Link href="/quiz" className={styles.linkWrapper}>
+            <Button variant="primary">Retake the Quiz</Button>
+          </Link>
+        </Card>
+      </div>
     );
   }
 
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-      <h1 style={{ marginBottom: 'var(--space-xl)' }}>Results Dashboard Placeholder</h1>
-      <Card variant="glass">
-        <pre style={{ 
-          background: 'rgba(0,0,0,0.3)', 
-          padding: 'var(--space-lg)', 
-          borderRadius: 'var(--radius-md)', 
-          overflowX: 'auto',
-          fontSize: 'var(--text-sm)',
-          color: 'var(--color-text)'
-        }}>
-          {JSON.stringify(result, null, 2)}
-        </pre>
-      </Card>
+    <div className={styles.container}>
+      
+      {/* 2-Column Grid for Score & Chart */}
+      <div className={styles.topGrid}>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <ScoreGauge score={result.overallScore} level={result.level} />
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <RadarChart breakdown={result.breakdown} />
+        </motion.div>
+      </div>
+
+      <motion.div 
+        className={styles.section}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <CategoryBreakdown breakdown={result.breakdown} categories={CATEGORIES} />
+      </motion.div>
+
+      {/* Coffee CTA */}
+      <motion.div 
+        className={styles.section}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+      >
+        <Card variant="solid" className={styles.coffeeCard}>
+          <p className={styles.coffeeText}>This tool is free forever. If it helped you, consider buying me a coffee ☕</p>
+          <Link href="#" className={styles.linkWrapper}>
+            <Button variant="secondary" className={styles.coffeeBtn}>
+              Buy me a coffee
+            </Button>
+          </Link>
+        </Card>
+      </motion.div>
+
+      <motion.div 
+        className={styles.section}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+      >
+        <ShareCard score={result.overallScore} level={result.level} />
+      </motion.div>
+
+      {/* Final Actions */}
+      <motion.div 
+        className={styles.finalActions}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <Link href="/quiz" className={styles.linkWrapper}>
+          <Button variant="secondary">Retake the Quiz</Button>
+        </Link>
+        <Link href="/blog" className={styles.linkWrapper}>
+          <Button variant="ghost">Read the Blog</Button>
+        </Link>
+      </motion.div>
     </div>
   );
 }
 
 export default function ResultsPage() {
   return (
-    <div className="container" style={{ paddingTop: 'var(--space-4xl)', paddingBottom: 'var(--space-4xl)', minHeight: 'calc(100vh - var(--navbar-height))' }}>
+    <div className={styles.pageWrapper}>
       <Suspense fallback={
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '40vh' }}>
-          <p style={{ color: 'var(--color-text-secondary)' }}>Initializing...</p>
+        <div className={styles.loadingContainer}>
+          <p className={styles.loadingText}>Initializing...</p>
         </div>
       }>
         <ResultsContent />

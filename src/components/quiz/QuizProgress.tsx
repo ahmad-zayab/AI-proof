@@ -18,7 +18,7 @@ export const QuizProgress: React.FC<QuizProgressProps> = ({ current, total }) =>
         <span className={styles.text}>Question {current} of {total}</span>
         <span className={styles.percentage}>{percentage}%</span>
       </div>
-      <ProgressBar progress={percentage} size="md" />
+      <ProgressBar value={percentage} height="md" ariaLabel={`Quiz progress: ${percentage}%`} />
     </div>
   );
 };

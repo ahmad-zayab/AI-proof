@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.gaugeWrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: var(--space-xl);
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+
+.arc {
+  transition: stroke-dashoffset 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.centerContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreRow {
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.scoreText {
+  font-size: var(--text-5xl);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.maxScore {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.levelContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.levelBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: var(--text-base);
+  letter-spacing: 0.02em;
+  font-family: var(--font-heading);
+}
+
+.subtext {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 400px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .gaugeWrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .scoreText {
+    font-size: var(--text-4xl);
+  }
+
+  .subtext {
+    font-size: var(--text-base);
+  }
+}

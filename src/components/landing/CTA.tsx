@@ -14,7 +14,7 @@ export const CTA: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
-          transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+          transition={{ type: 'spring' as const, stiffness: 100, damping: 20 }}
         >
           <Card variant="glass" className={styles.card}>
             <h2 className={styles.heading}>Ready to future-proof your career?</h2>
