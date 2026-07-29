@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.track {
+  flex-grow: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Heights */
+.height-sm {
+  height: 6px;
+}
+
+.height-md {
+  height: 10px;
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.animated {
+  transition: width 500ms ease;
+}
+
+/* Variants */
+.primary {
+  background: var(--gradient-primary);
+}
+
+.success {
+  background: var(--color-success);
+}
+
+.warning {
+  background: var(--color-warning);
+}
+
+.danger {
+  background: var(--color-danger);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  min-width: 3ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
