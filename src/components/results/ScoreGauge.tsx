@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { AnimatedCounter, Badge } from '@/components/ui';
+import { ShieldCheck, TrendingUp, AlertTriangle, Siren } from 'lucide-react';
 import styles from './ScoreGauge.module.css';
 
 interface ScoreGaugeProps {
@@ -20,29 +21,29 @@ export const ScoreGauge: React.FC<ScoreGaugeProps> = ({ score, level }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  let levelIcon = '';
+  let levelIcon: React.ReactNode = null;
   let subtext = '';
   let color = '';
 
   switch (level) {
     case 'Highly AI-Proof':
-      levelIcon = '🛡️';
+      levelIcon = <ShieldCheck size={18} />;
       subtext = 'AI is your co-pilot, not your replacement';
       color = 'var(--color-success)';
       break;
     case 'Moderately Safe':
-      levelIcon = '📈';
+      levelIcon = <TrendingUp size={18} />;
       subtext = "You're adapting, but have gaps to fill";
       color = 'var(--color-primary)';
       break;
     case 'At Risk':
-      levelIcon = '⚠️';
+      levelIcon = <AlertTriangle size={18} />;
       subtext = 'Time to level up before AI catches up';
       color = 'var(--color-warning)';
       break;
     case 'Critical Alert':
     default:
-      levelIcon = '🚨';
+      levelIcon = <Siren size={18} />;
       subtext = 'Your current skillset is highly automatable';
       color = 'var(--color-danger)';
       break;
@@ -101,7 +102,7 @@ export const ScoreGauge: React.FC<ScoreGaugeProps> = ({ score, level }) => {
             border: `1px solid color-mix(in srgb, ${color} 30%, transparent)`
           }}
         >
-          {level} {levelIcon}
+          {level} <span className={styles.iconWrapper}>{levelIcon}</span>
         </div>
         <p className={styles.subtext}>{subtext}</p>
       </div>

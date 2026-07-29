@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
         <div className={styles.content}>
           <motion.div variants={itemVariants} className={styles.badgeWrapper}>
             <Badge variant="neutral" size="md">
-              🔥 Over 10,000 developers tested
+              Over 10,000 developers tested
             </Badge>
           </motion.div>
 

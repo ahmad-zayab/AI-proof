@@ -71,6 +71,12 @@
   font-family: var(--font-heading);
 }
 
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-xs);
+}
+
 .subtext {
   font-size: var(--text-lg);
   color: var(--color-text-secondary);

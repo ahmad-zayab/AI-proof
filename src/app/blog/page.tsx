@@ -1,14 +1,20 @@
 import { Metadata } from 'next';
+import { getBlogPosts } from '@/lib/mdx';
+import { BlogList } from './BlogList';
+import styles from './Blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Read the latest insights on AI and software engineering.',
+  title: 'Blog | AI-Proof Engineer',
+  description: 'Thoughts on AI, software architecture, and the future of coding.',
 };
 
 export default function BlogPage() {
+  const posts = getBlogPosts();
+
   return (
-    <div className="container" style={{ paddingTop: 'var(--space-3xl)', paddingBottom: 'var(--space-3xl)' }}>
-      <h1>Blog</h1>
+    <div className={styles.container}>
+
+      <BlogList posts={posts} />
     </div>
   );
 }

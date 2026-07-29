@@ -1,0 +1,88 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-md);
+}
+
+.title {
+  font-size: var(--text-5xl);
+  font-family: var(--font-heading);
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--color-text), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--space-2xl);
+}
+
+.content p {
+  margin-bottom: var(--space-lg);
+}
+
+.philosophyCard {
+  margin: var(--space-3xl) 0;
+  padding: var(--space-2xl);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+}
+
+.philosophyTitle {
+  font-size: var(--text-2xl);
+  font-family: var(--font-heading);
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-light);
+  text-align: center;
+}
+
+.philosophyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.philosophyList li {
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+  position: relative;
+  line-height: 1.6;
+}
+
+.philosophyList li:last-child {
+  margin-bottom: 0;
+}
+
+.philosophyList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.supportSection {
+  margin-top: var(--space-4xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.supportSection h3 {
+  font-size: var(--text-2xl);
+  font-family: var(--font-heading);
+}
+
+.supportSection p {
+  color: var(--color-text-muted);
+  max-width: 500px;
+}

@@ -8,7 +8,7 @@ import { Card, Button } from '@/components/ui';
 import { decodeResultsFromUrl } from '@/lib/scoring';
 import { CATEGORIES } from '@/lib/quiz-data';
 import { QuizResult } from '@/types';
-import { ScoreGauge, RadarChart, CategoryBreakdown, ShareCard } from '@/components/results';
+import { ScoreGauge, RadarChart, ShareCard } from '@/components/results';
 import styles from './page.module.css';
 
 function ResultsContent() {
@@ -85,14 +85,7 @@ function ResultsContent() {
         </motion.div>
       </div>
 
-      <motion.div 
-        className={styles.section}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <CategoryBreakdown breakdown={result.breakdown} categories={CATEGORIES} />
-      </motion.div>
+
 
       {/* Coffee CTA */}
       <motion.div 
@@ -102,7 +95,7 @@ function ResultsContent() {
         viewport={{ once: true, margin: '-50px' }}
       >
         <Card variant="solid" className={styles.coffeeCard}>
-          <p className={styles.coffeeText}>This tool is free forever. If it helped you, consider buying me a coffee ☕</p>
+          <p className={styles.coffeeText}>This tool is free forever. If it helped you, consider buying me a coffee.</p>
           <Link href="#" className={styles.linkWrapper}>
             <Button variant="secondary" className={styles.coffeeBtn}>
               Buy me a coffee
