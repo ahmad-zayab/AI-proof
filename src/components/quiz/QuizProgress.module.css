@@ -1,0 +1,27 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto var(--space-sm) auto;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.percentage {
+  font-size: var(--text-sm);
+  color: var(--color-primary-light);
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
