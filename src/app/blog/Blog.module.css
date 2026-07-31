@@ -44,7 +44,7 @@
 
 /* Gradient hover effect on title */
 .cardLink:hover .cardTitle {
-  background: var(--gradient-primary);
+  background: var(--color-primary);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

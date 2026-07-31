@@ -11,7 +11,7 @@
 .glowOrb {
   width: 150px;
   height: 150px;
-  background: var(--gradient-primary);
+  background: var(--color-primary);
   border-radius: 50%;
   filter: blur(50px);
   position: absolute;
@@ -30,7 +30,7 @@
   font-size: var(--text-3xl);
   margin-bottom: var(--space-md);
   font-family: var(--font-heading);
-  background: var(--gradient-primary);
+  background: var(--color-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

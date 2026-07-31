@@ -16,27 +16,27 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ai-proof-engineer.vercel.app"),
+  metadataBase: new URL("https://ai-proof.vercel.app"),
   title: { 
-    default: "AI-Proof Engineer | Is AI Coming For Your Job?", 
-    template: "%s | AI-Proof Engineer" 
+    default: "AI Proof | Is AI Coming For Your Job?", 
+    template: "%s | AI Proof" 
   },
-  description: "Take the free 5-minute quiz to discover your personalized AI-Proof Score. Find out which developer skills are safe from automation and get a roadmap to future-proof your career.",
+  description: "Take the 7-question engineering assessment. Find out which developer skills are safe from automation.",
   keywords: ["AI proof skills", "will AI replace software engineers", "developer skills test", "AI-proof engineer quiz", "future proof developer career", "skills AI can't replace"],
-  authors: [{ name: "AI-Proof Engineer" }],
-  creator: "AI-Proof Engineer",
+  authors: [{ name: "AI Proof" }],
+  creator: "AI Proof",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ai-proof-engineer.vercel.app",
-    siteName: "AI-Proof Engineer",
-    title: "AI-Proof Engineer | Is AI Coming For Your Job?",
+    url: "https://ai-proof.vercel.app",
+    siteName: "AI Proof",
+    title: "AI Proof | Is AI Coming For Your Job?",
     description: "Take the free 5-minute quiz to discover your AI-Proof Score.",
-    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "AI-Proof Engineer" }]
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "AI Proof" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI-Proof Engineer | Is AI Coming For Your Job?",
+    title: "AI Proof | Is AI Coming For Your Job?",
     description: "Take the free 5-minute quiz to discover your AI-Proof Score.",
     images: ["/og-default.png"]
   },

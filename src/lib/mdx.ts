@@ -36,7 +36,7 @@ export function getBlogPosts(): BlogPost[] {
         date: data.date || new Date().toISOString(),
         excerpt: data.excerpt || '',
         content,
-        author: data.author || 'AI-Proof Engineer',
+        author: data.author || 'AI Proof',
         tags: data.tags || [],
       };
     });
@@ -67,7 +67,7 @@ export function getBlogPostBySlug(slug: string): BlogPost | null {
       date: data.date || new Date().toISOString(),
       excerpt: data.excerpt || '',
       content,
-      author: data.author || 'AI-Proof Engineer',
+      author: data.author || 'AI Proof',
       tags: data.tags || [],
     };
   } catch (e) {

@@ -28,46 +28,42 @@ body {
 /* 2. CSS CUSTOM PROPERTIES */
 :root {
   /* Colors */
-  --color-bg:             #0a0a0f;
-  --color-surface:        #12121a;
-  --color-surface-hover:  #1a1a2e;
+  --color-bg:             #09090b;
+  --color-surface:        #18181b;
+  --color-surface-hover:  #27272a;
   --color-surface-active: #222240;
-  --color-primary:        #6c5ce7;
-  --color-primary-light:  #a29bfe;
-  --color-accent:         #00cec9;
+  --color-primary:        #e8e4ff;
+  --color-primary-light:  #f0edff;
+  --color-accent:         #ff6b35;
   --color-accent-light:   #55efc4;
   --color-danger:         #ff6b6b;
   --color-warning:        #feca57;
   --color-success:        #00b894;
-  --color-text:           #f5f5f5;
-  --color-text-secondary: #a0a0b0;
-  --color-text-muted:     #6b6b80;
-  --color-border:         rgba(255, 255, 255, 0.08);
+  --color-text:           #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted:     #71717a;
+  --color-border:         #3f3f46;
   --color-border-hover:   rgba(255, 255, 255, 0.15);
   --color-glass:          rgba(18, 18, 26, 0.7);
 
   /* Gradients */
-  --gradient-primary:     linear-gradient(135deg, #6c5ce7, #a29bfe);
-  --gradient-accent:      linear-gradient(135deg, #00cec9, #55efc4);
   --gradient-danger:      linear-gradient(135deg, #ff6b6b, #ee5a24);
-  --gradient-hero:        radial-gradient(ellipse at 20% 50%, rgba(108, 92, 231, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(0, 206, 201, 0.1) 0%, transparent 50%);
-  --gradient-glow:        0 0 20px rgba(108, 92, 231, 0.3), 0 0 60px rgba(108, 92, 231, 0.1);
 
   /* Typography */
   --font-heading:    'Space Grotesk', sans-serif;
   --font-body:       'Inter', sans-serif;
   --font-mono:       'JetBrains Mono', monospace;
 
-  /* Font sizes */
-  --text-xs:    clamp(0.75rem, 0.7rem + 0.25vw, 0.8rem);
-  --text-sm:    clamp(0.8rem, 0.75rem + 0.3vw, 0.9rem);
-  --text-base:  clamp(0.9rem, 0.85rem + 0.3vw, 1rem);
-  --text-lg:    clamp(1.1rem, 1rem + 0.4vw, 1.25rem);
-  --text-xl:    clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
-  --text-2xl:   clamp(1.5rem, 1.2rem + 1vw, 2rem);
-  --text-3xl:   clamp(1.8rem, 1.4rem + 1.5vw, 2.5rem);
-  --text-4xl:   clamp(2.2rem, 1.6rem + 2vw, 3.5rem);
-  --text-5xl:   clamp(2.8rem, 2rem + 2.5vw, 4.5rem);
+  /* Font sizes (Scaled down by 20% for 100% zoom parity) */
+  --text-xs:    clamp(0.6rem, 0.56rem + 0.2vw, 0.64rem);
+  --text-sm:    clamp(0.64rem, 0.6rem + 0.24vw, 0.72rem);
+  --text-base:  clamp(0.72rem, 0.68rem + 0.24vw, 0.8rem);
+  --text-lg:    clamp(0.88rem, 0.8rem + 0.32vw, 1rem);
+  --text-xl:    clamp(1rem, 0.88rem + 0.4vw, 1.2rem);
+  --text-2xl:   clamp(1.2rem, 0.96rem + 0.8vw, 1.6rem);
+  --text-3xl:   clamp(1.44rem, 1.12rem + 1.2vw, 2rem);
+  --text-4xl:   clamp(1.76rem, 1.28rem + 1.6vw, 2.8rem);
+  --text-5xl:   clamp(2.24rem, 1.6rem + 2vw, 3.6rem);
 
   /* Spacing scale */
   --space-xs:   0.25rem;
@@ -91,7 +87,6 @@ body {
   --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md:   0 4px 16px rgba(0, 0, 0, 0.4);
   --shadow-lg:   0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: var(--gradient-glow);
 
   /* Transitions */
   --transition-fast:   150ms ease;
@@ -114,25 +109,13 @@ body {
 
 /* 3. BODY STYLES */
 body {
-  background-color: var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: var(--gradient-hero);
-  pointer-events: none;
-  z-index: -1;
 }
 
 /* 4. BASE TYPOGRAPHY STYLES */
@@ -191,17 +174,9 @@ code {
   border-width: 0;
 }
 
-.gradient-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 .glass {
   background: var(--color-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   transition: border-color var(--transition-fast);
@@ -209,10 +184,6 @@ code {
 
 .glass:hover {
   border-color: var(--color-border-hover);
-}
-
-.glow {
-  box-shadow: var(--shadow-glow);
 }
 
 /* 6. ANIMATION KEYFRAMES */
@@ -224,16 +195,6 @@ code {
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 
 @keyframes scaleIn {
@@ -262,6 +223,6 @@ code {
 
 /* 8. SELECTION STYLING */
 ::selection {
-  background: rgba(108, 92, 231, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }

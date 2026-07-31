@@ -12,10 +12,10 @@ function getScoreColor(score: number): string {
 }
 
 function getLevelEmoji(level: string): string {
-  if (level === 'Highly AI-Proof') return '🛡️';
-  if (level === 'Moderately Safe') return '📈';
-  if (level === 'At Risk') return '⚠️';
-  return '🚨';
+  if (level === 'Highly AI-Proof') return '';
+  if (level === 'Moderately Safe') return '';
+  if (level === 'At Risk') return '';
+  return '';
 }
 
 export async function GET(request: Request) {
@@ -29,7 +29,7 @@ export async function GET(request: Request) {
       return new ImageResponse(
         (
           <div style={{ display: 'flex', width: '100%', height: '100%', backgroundColor: '#0a0a0f', justifyContent: 'center', alignItems: 'center' }}>
-            <h1 style={{ color: 'white', fontSize: 72, fontWeight: 'bold', fontFamily: 'sans-serif' }}>AI-Proof Engineer</h1>
+            <h1 style={{ color: 'white', fontSize: 72, fontWeight: 'bold', fontFamily: 'sans-serif' }}>AI Proof</h1>
           </div>
         ),
         { width: 1200, height: 630 }
@@ -53,7 +53,7 @@ export async function GET(request: Request) {
           {/* Left Side - Primary Information */}
           <div style={{ display: 'flex', flexDirection: 'column', width: '55%', justifyContent: 'space-between' }}>
             <div style={{ display: 'flex', fontSize: 42, fontWeight: 'bold', color: 'white', letterSpacing: '-0.02em' }}>
-              AI-Proof Engineer
+              AI Proof
             </div>
             
             <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -76,7 +76,7 @@ export async function GET(request: Request) {
             </div>
             
             <div style={{ display: 'flex', fontSize: 28, color: '#a0a0b0', fontWeight: 500 }}>
-              Take the quiz at ai-proof-engineer.vercel.app
+              Take the quiz at ai-proof.vercel.app
             </div>
           </div>
 

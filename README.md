@@ -1,4 +1,4 @@
-# AI-Proof Engineer
+# AI Proof
 
 Interactive quiz that analyzes your developer skills and shows which are AI-proof
 

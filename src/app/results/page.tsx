@@ -26,7 +26,7 @@ function ResultsContent() {
         setResult(decoded);
         if (decoded) {
           // Dynamic SEO Title Update
-          document.title = `My AI-Proof Score: ${Math.round(decoded.overallScore)}/100 | AI-Proof Engineer`;
+          document.title = `My AI-Proof Score: ${Math.round(decoded.overallScore)}/100 | AI Proof`;
         }
       } else {
         setResult(null);
@@ -56,7 +56,7 @@ function ResultsContent() {
             This results link appears to be invalid or tampered with. Please retake the quiz for accurate results.
           </p>
           <Link href="/quiz" className={styles.linkWrapper}>
-            <Button variant="primary">Retake the Quiz</Button>
+            <Button variant="primary">Retake</Button>
           </Link>
         </Card>
       </div>
@@ -87,22 +87,7 @@ function ResultsContent() {
 
 
 
-      {/* Coffee CTA */}
-      <motion.div 
-        className={styles.section}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-50px' }}
-      >
-        <Card variant="solid" className={styles.coffeeCard}>
-          <p className={styles.coffeeText}>This tool is free forever. If it helped you, consider buying me a coffee.</p>
-          <Link href="#" className={styles.linkWrapper}>
-            <Button variant="secondary" className={styles.coffeeBtn}>
-              Buy me a coffee
-            </Button>
-          </Link>
-        </Card>
-      </motion.div>
+
 
       <motion.div 
         className={styles.section}
@@ -121,10 +106,10 @@ function ResultsContent() {
         viewport={{ once: true }}
       >
         <Link href="/quiz" className={styles.linkWrapper}>
-          <Button variant="secondary">Retake the Quiz</Button>
+          <Button variant="secondary">Retake</Button>
         </Link>
         <Link href="/blog" className={styles.linkWrapper}>
-          <Button variant="ghost">Read the Blog</Button>
+          <Button variant="ghost">Read more</Button>
         </Link>
       </motion.div>
     </div>

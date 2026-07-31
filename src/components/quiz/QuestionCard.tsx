@@ -67,7 +67,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             disabled={!canGoBack}
             className={!canGoBack ? styles.hidden : ''}
           >
-            ← Back
+            Back
           </Button>
           
           <Button 
@@ -75,7 +75,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
             onClick={onNext}
             disabled={!selectedAnswerId}
           >
-            {isLastQuestion ? 'Calculate Score' : 'Next Question →'}
+            {isLastQuestion ? 'Submit' : 'Next'}
           </Button>
         </div>
       </motion.div>

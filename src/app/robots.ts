@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ai-proof-engineer.vercel.app/sitemap.xml',
+    sitemap: 'https://ai-proof.vercel.app/sitemap.xml',
   };
 }

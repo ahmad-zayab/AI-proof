@@ -2,7 +2,7 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  box-shadow: var(--shadow-glow) !important;
+  box-shadow: none !important;
   padding: var(--space-3xl) var(--space-xl) !important;
 }
 

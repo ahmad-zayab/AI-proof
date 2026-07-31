@@ -27,24 +27,24 @@ export const ScoreGauge: React.FC<ScoreGaugeProps> = ({ score, level }) => {
 
   switch (level) {
     case 'Highly AI-Proof':
-      levelIcon = <ShieldCheck size={18} />;
-      subtext = 'AI is your co-pilot, not your replacement';
+      levelIcon = '';
+      subtext = 'Your skills are difficult to automate';
       color = 'var(--color-success)';
       break;
     case 'Moderately Safe':
-      levelIcon = <TrendingUp size={18} />;
-      subtext = "You're adapting, but have gaps to fill";
+      levelIcon = '';
+      subtext = 'Some of your skills are vulnerable to automation';
       color = 'var(--color-primary)';
       break;
     case 'At Risk':
-      levelIcon = <AlertTriangle size={18} />;
-      subtext = 'Time to level up before AI catches up';
+      levelIcon = '';
+      subtext = 'A significant portion of your work can be automated';
       color = 'var(--color-warning)';
       break;
     case 'Critical Alert':
     default:
-      levelIcon = <Siren size={18} />;
-      subtext = 'Your current skillset is highly automatable';
+      levelIcon = '';
+      subtext = 'Most of your current tasks can be handled by AI';
       color = 'var(--color-danger)';
       break;
   }
@@ -102,7 +102,7 @@ export const ScoreGauge: React.FC<ScoreGaugeProps> = ({ score, level }) => {
             border: `1px solid color-mix(in srgb, ${color} 30%, transparent)`
           }}
         >
-          {level} <span className={styles.iconWrapper}>{levelIcon}</span>
+          {level}
         </div>
         <p className={styles.subtext}>{subtext}</p>
       </div>

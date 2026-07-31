@@ -24,9 +24,9 @@ export const QuizComplete: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         className={styles.content}
       >
-        <h2 className={styles.title}>Analyzing your profile...</h2>
+        <h2 className={styles.title}>Calculating your results</h2>
         <p className={styles.subtitle}>
-          Comparing your skills against AI automation models.
+          This will only take a moment.
         </p>
       </motion.div>
     </div>

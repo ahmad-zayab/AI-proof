@@ -33,7 +33,7 @@
 
 /* Variants */
 .primary {
-  background: var(--gradient-primary);
+  background: var(--color-primary);
 }
 
 .success {

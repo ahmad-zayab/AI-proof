@@ -161,7 +161,7 @@ export const QUESTIONS: Question[] = [
       },
       {
         id: 'q4a3',
-        text: "Ask Copilot why Safari behaves differently on cellular networks.",
+        text: "Ask an AI assistant why Safari behaves differently on cellular networks.",
         scoreMap: { systemDesign: 0, fundamentals: 0, aiOrchestration: 0, debugging: 25, architecture: 0, communication: 0, domainExpertise: 0 }
       },
       {

@@ -22,7 +22,7 @@ export const QuizIntro: React.FC<QuizIntroProps> = ({ onStart }) => {
       className={styles.container}
     >
       <Card variant="glass" className={styles.card}>
-        <h1 className={styles.title}>Customize Your Assessment</h1>
+        <h1 className={styles.title}>Before you start</h1>
         <p className={styles.subtitle}>
           We tailor the score analysis based on your current experience and primary role.
         </p>
@@ -60,7 +60,7 @@ export const QuizIntro: React.FC<QuizIntroProps> = ({ onStart }) => {
           onClick={() => onStart(experience, role)}
           className={styles.button}
         >
-          Start Assessment →
+          Start
         </Button>
       </Card>
     </motion.div>

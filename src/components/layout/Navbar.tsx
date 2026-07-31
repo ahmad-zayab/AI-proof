@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
       <nav className={`${styles.nav} container`}>
         {/* Brand */}
         <Link href="/" className={styles.brand} onClick={closeMobileMenu}>
-          <span className={styles.brandAccent}>AI</span>-Proof Engineer
+          <span className={styles.brandAccent}>AI</span> Proof
         </Link>
 
         {/* Desktop Links */}

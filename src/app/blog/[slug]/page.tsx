@@ -29,19 +29,19 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   if (!post) {
     return {
-      title: 'Post Not Found | AI-Proof Engineer',
+      title: 'Post Not Found | AI Proof',
     };
   }
 
   return {
-    title: `${post.title} | AI-Proof Engineer`,
+    title: `${post.title} | AI Proof`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.date,
-      authors: [post.author || 'AI-Proof Engineer'],
+      authors: [post.author || 'AI Proof'],
     },
   };
 }
@@ -111,12 +111,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         <aside className={styles.ctaContainer}>
           <Card variant="glass" className={styles.ctaCard}>
-            <h3 className={styles.ctaTitle}>Are your skills AI-proof?</h3>
+            <h3 className={styles.ctaTitle}>Want to know your score?</h3>
             <p>
-              Take the free 5-minute assessment to discover where you stand and what skills you need to learn next.
+              Take the 7-question engineering assessment.
             </p>
             <Link href="/quiz">
-              <Button variant="primary">Take the Free Assessment</Button>
+              <Button variant="primary">Take the assessment</Button>
             </Link>
           </Card>
         </aside>

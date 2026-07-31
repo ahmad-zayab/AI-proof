@@ -13,7 +13,7 @@ export const ShareCard: React.FC<ShareCardProps> = ({ score, level }) => {
   const [copied, setCopied] = useState(false);
 
   const handleTwitter = () => {
-    const text = encodeURIComponent(`I scored ${score}/100 on the AI-Proof Engineer quiz! My level: ${level}. Are you AI-proof?`);
+    const text = encodeURIComponent(`I scored ${score}/100 on the AI Proof quiz! My level: ${level}. Are you AI-proof?`);
     const url = encodeURIComponent(window.location.href);
     window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
   };
@@ -32,8 +32,8 @@ export const ShareCard: React.FC<ShareCardProps> = ({ score, level }) => {
 
   return (
     <Card variant="glass" className={styles.card}>
-      <h3 className={styles.title}>Share Your Score</h3>
-      <p className={styles.subtext}>Challenge your friends — are they AI-proof?</p>
+      <h3 className={styles.title}>Share your results</h3>
+      <p className={styles.subtext}>See how your score compares with others.</p>
       
       <div className={styles.buttonGroup}>
         <Button variant="primary" className={styles.twitterBtn} onClick={handleTwitter}>

@@ -4,7 +4,7 @@ import { BlogList } from './BlogList';
 import styles from './Blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog | AI-Proof Engineer',
+  title: 'Blog | AI Proof',
   description: 'Thoughts on AI, software architecture, and the future of coding.',
 };
 

@@ -3,8 +3,7 @@
   top: 0;
   z-index: var(--z-sticky);
   background: rgba(10, 10, 15, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+
   border-bottom: 1px solid var(--color-border);
   height: var(--navbar-height);
 }
@@ -21,17 +20,11 @@
   font-weight: 700;
   font-size: var(--text-xl);
   color: var(--color-text);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   text-decoration: none;
 }
 
 .brandAccent {
   color: var(--color-accent);
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
 }
 
 .desktopLinks {
@@ -125,8 +118,7 @@
   left: 0;
   width: 100%;
   background: var(--color-glass);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+
   border-bottom: 1px solid var(--color-border);
   overflow: hidden;
   max-height: 0;

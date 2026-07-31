@@ -35,8 +35,7 @@ export const BuyMeCoffeeWidget: React.FC<BuyMeCoffeeWidgetProps> = ({
       className={`${styles.widget} ${isVisible ? styles.visible : ''}`}
       aria-label="Buy me a coffee"
     >
-      <span className={styles.icon}>☕</span>
-      <span className={styles.text}>Buy me a coffee</span>
+      <span className={styles.text}>Support this project</span>
     </a>
   );
 };

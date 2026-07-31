@@ -45,13 +45,12 @@
 
 /* Variants */
 .primary {
-  background: var(--gradient-primary);
-  color: white;
+  background: var(--color-accent);
+  color: #fff;
 }
 
 .primary:hover:not(:disabled) {
   filter: brightness(1.1);
-  box-shadow: var(--shadow-glow);
   transform: scale(1.02);
 }
 
@@ -77,7 +76,7 @@
 }
 
 .danger {
-  background: var(--gradient-danger);
+  background: var(--color-danger);
   color: white;
 }
 
