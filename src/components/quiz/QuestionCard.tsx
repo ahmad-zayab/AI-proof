@@ -36,23 +36,23 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         className={styles.container}
       >
         <div className={styles.questionWrapper}>
-          <h2 className={styles.questionText}>{question.text}</h2>
+          <h2 className={styles.questionText}>{question.question}</h2>
         </div>
 
         <div className={styles.optionsGrid}>
-          {question.answers.map((answer) => (
+          {question.options.map((answer: any, index: number) => (
             <div 
-              key={answer.id}
-              onClick={() => onSelect(answer.id)}
+              key={index}
+              onClick={() => onSelect(index.toString())}
               className={styles.optionWrapper}
             >
               <Card 
                 variant="outline" 
                 hoverable={true} 
-                className={`${styles.optionCard} ${selectedAnswerId === answer.id ? styles.selected : ''}`}
+                className={`${styles.optionCard} ${selectedAnswerId === index.toString() ? styles.selected : ''}`}
               >
                 <div className={styles.optionContent}>
-                  <div className={`${styles.radio} ${selectedAnswerId === answer.id ? styles.radioSelected : ''}`} />
+                  <div className={`${styles.radio} ${selectedAnswerId === index.toString() ? styles.radioSelected : ''}`} />
                   <span className={styles.answerText}>{answer.text}</span>
                 </div>
               </Card>

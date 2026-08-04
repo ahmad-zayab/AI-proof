@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 export default function QuizLayout({ children }: { children: React.ReactNode }) {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <header style={{ padding: 'var(--space-sm) var(--space-lg)' }}>
+      <header style={{ padding: 'var(--space-xl) var(--space-2xl)' }}>
         <Link 
           href="/" 
           style={{ 
             color: 'var(--color-text-secondary)', 
             textDecoration: 'none', 
-            fontSize: 'var(--text-sm)',
+            fontSize: 'var(--text-base)',
             fontWeight: 600,
             textTransform: 'uppercase',
             letterSpacing: '0.05em',

@@ -42,7 +42,7 @@ export default function QuizPage() {
           >
             <QuizProgress 
               current={state.currentQuestionIndex + 1} 
-              total={QUESTIONS.length} 
+              total={state.questions.length} 
             />
             {/* The QuestionCard manages its own horizontal sliding AnimatePresence based on question.id */}
             <QuestionCard

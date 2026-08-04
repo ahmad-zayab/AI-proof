@@ -3,12 +3,12 @@ import { RadarChart } from '@/components/results/RadarChart';
 import styles from './Evidence.module.css';
 
 const sampleBreakdown = {
-  systemDesign: 85,
-  fundamentals: 60,
-  aiOrchestration: 90,
-  debugging: 45,
-  architecture: 75,
-  communication: 70,
+  ambiguity: 85,
+  emotionalIntelligence: 60,
+  strategicJudgment: 90,
+  adaptability: 45,
+  contextualNuance: 75,
+  creativeSynthesis: 70,
   domainExpertise: 55,
 };
 

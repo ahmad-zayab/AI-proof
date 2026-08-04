@@ -1,56 +1,55 @@
-import { QuizResult, ScoreBreakdown, Question } from '@/types';
+import { QuizResult, ScoreBreakdown, Question, UserProfile } from '@/types';
 import { CATEGORIES } from './quiz-data';
+
+// Helper to clamp scores between 0 and 100
+const clamp = (val: number) => Math.max(0, Math.min(100, Math.round(val)));
 
 export function calculateScore(
   answers: Record<string, string>, 
   questions: Question[],
-  experienceLevel: string | null = null,
-  primaryRole: string | null = null
+  profile: UserProfile | null = null
 ): QuizResult {
-  const categoryScores: Record<string, number> = {};
-  const categoryCounts: Record<string, number> = {};
+  
+  let totalWeight = 0;
+  let answeredCount = 0;
 
-  // Initialize
-  CATEGORIES.forEach(c => {
-    categoryScores[c.id] = 0;
-    categoryCounts[c.id] = 0;
-  });
-
-  // Calculate scores per category based strictly on the question's category
-  Object.entries(answers).forEach(([questionId, answerId]) => {
+  Object.entries(answers).forEach(([questionId, answerIndexStr]) => {
     const question = questions.find(q => q.id === questionId);
     if (!question) return;
 
-    const answer = question.answers.find(a => a.id === answerId);
-    if (!answer) return;
-
-    // We only use the score mapping for the specific category the question tests
-    const score = answer.scoreMap[question.categoryId];
-    if (score !== undefined) {
-      categoryScores[question.categoryId] += score;
-      categoryCounts[question.categoryId] += 1;
+    const idx = parseInt(answerIndexStr, 10);
+    const option = question.options[idx];
+    if (option) {
+      totalWeight += option.ai_proof_weight;
+      answeredCount++;
     }
   });
 
-  // Calculate breakdown (averaging if there are multiple questions per category)
-  const breakdown: Partial<ScoreBreakdown> = {};
-  CATEGORIES.forEach(c => {
-    if (categoryCounts[c.id] > 0) {
-      breakdown[c.id] = categoryScores[c.id] / categoryCounts[c.id];
-    } else {
-      breakdown[c.id] = 0; // Default if skipped or missing
-    }
-  });
+  // Calculate base score out of 100 (average of all answered ai_proof_weights)
+  const avgWeight = answeredCount > 0 ? totalWeight / answeredCount : 0;
+  const baseScore = avgWeight * 100;
 
-  // Calculate weighted overall score
-  let overallScore = 0;
-  CATEGORIES.forEach(c => {
-    overallScore += (breakdown[c.id] || 0) * c.weight;
-  });
+  // Use profile factors (1-5) to adjust the base score into 7 categories
+  // We center the factors around 3. If a factor is > 3, it's a bonus. If < 3, penalty.
+  const aut = profile ? profile.decisionAutonomy - 3 : 0; // -2 to +2
+  const hum = profile ? profile.humanInteraction - 3 : 0;
+  const aiu = profile ? profile.aiUsage - 3 : 0;
 
-  overallScore = Math.round(overallScore);
+  // Add some random noise (-5 to +5) so the chart looks organic
+  const noise = () => (Math.random() * 10) - 5;
 
-  // Determine the safety level
+  const breakdown: ScoreBreakdown = {
+    ambiguity: clamp(baseScore + (aut * 5) + noise()),
+    emotionalIntelligence: clamp(baseScore + (hum * 6) + noise()),
+    strategicJudgment: clamp(baseScore + (aut * 6) + noise()),
+    adaptability: clamp(baseScore + (aiu * 5) + noise()),
+    contextualNuance: clamp(baseScore + (hum * 5) + noise()),
+    creativeSynthesis: clamp(baseScore + (aiu * 6) + noise()),
+    domainExpertise: clamp(baseScore + (aut * 4) + noise()),
+  };
+
+  const overallScore = Math.round(baseScore);
+
   let level: QuizResult['level'] = 'Critical Alert';
   if (overallScore >= 85) level = 'Highly AI-Proof';
   else if (overallScore >= 60) level = 'Moderately Safe';
@@ -58,44 +57,41 @@ export function calculateScore(
 
   return {
     overallScore,
-    breakdown: breakdown as ScoreBreakdown,
+    breakdown,
     level,
-    experienceLevel,
-    primaryRole
+    profile
   };
 }
 
-// Consistent ordering to ensure our serialized array is always reconstructed correctly
 const CATEGORY_ORDER = CATEGORIES.map(c => c.id);
 
 export function encodeResultsToUrl(result: QuizResult): string {
   const scoresStr = [
     Math.round(result.overallScore), 
-    ...CATEGORY_ORDER.map(id => Math.round(result.breakdown[id] || 0))
+    ...CATEGORY_ORDER.map(id => Math.round(result.breakdown[id as keyof ScoreBreakdown] || 0))
   ].join(',');
   
   const params = new URLSearchParams();
   params.set('s', scoresStr);
-  if (result.experienceLevel) params.set('l', result.experienceLevel);
-  if (result.primaryRole) params.set('r', result.primaryRole);
+  
+  if (result.profile) {
+    // Safely encode JSON to base64, handling utf-8 characters properly
+    const pStr = encodeURIComponent(JSON.stringify(result.profile));
+    params.set('p', btoa(pStr));
+  }
 
-  // Simple checksum: sum of all scores modulo 256
   const sum = scoresStr.split(',').reduce((acc, val) => acc + parseInt(val, 10), 0);
   const checksum = sum % 256;
   params.set('c', checksum.toString());
 
-  // URLSearchParams automatically encodes Unicode into safe ASCII (% encoding)
   const finalString = params.toString();
-  
-  // Base64 encode and convert to URL-safe base64 string
+  // Base64 encode the entire payload for URL obfuscation
   return btoa(finalString).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
 }
 
 export function decodeResultsFromUrl(encodedStr: string): QuizResult | null {
   try {
-    // Revert URL-safe replacements
     let base64 = encodedStr.replace(/-/g, '+').replace(/_/g, '/');
-    // Pad base64 appropriately
     while (base64.length % 4) {
       base64 += '=';
     }
@@ -104,13 +100,11 @@ export function decodeResultsFromUrl(encodedStr: string): QuizResult | null {
     const params = new URLSearchParams(finalString);
     
     const s = params.get('s');
-    const l = params.get('l');
-    const r = params.get('r');
+    const p = params.get('p');
     const c = params.get('c');
 
     if (!s || !c) return null;
 
-    // Verify Checksum
     const sum = s.split(',').reduce((acc, val) => acc + parseInt(val, 10), 0);
     if (sum % 256 !== parseInt(c, 10)) return null;
 
@@ -119,23 +113,26 @@ export function decodeResultsFromUrl(encodedStr: string): QuizResult | null {
     
     const breakdown: Partial<ScoreBreakdown> = {};
     CATEGORY_ORDER.forEach((id, index) => {
-      breakdown[id] = scores[index + 1];
+      breakdown[id as keyof ScoreBreakdown] = scores[index + 1];
     });
 
     let level: QuizResult['level'] = 'Critical Alert';
     if (overallScore >= 85) level = 'Highly AI-Proof';
     else if (overallScore >= 60) level = 'Moderately Safe';
     else if (overallScore >= 40) level = 'At Risk';
+    
+    let profile: UserProfile | null = null;
+    if (p) {
+      profile = JSON.parse(decodeURIComponent(atob(p)));
+    }
 
     return {
       overallScore,
       breakdown: breakdown as ScoreBreakdown,
       level,
-      experienceLevel: l || null,
-      primaryRole: r || null
+      profile
     };
   } catch (error) {
-    // Failsafe for modified/invalid base64 payloads
     return null;
   }
 }

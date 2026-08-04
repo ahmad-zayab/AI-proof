@@ -66,6 +66,19 @@ function ResultsContent() {
   return (
     <div className={styles.container}>
       
+      {result.profile && (
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }} 
+          animate={{ opacity: 1, y: 0 }}
+          style={{ textAlign: 'center', marginBottom: 'var(--space-xl)', color: 'var(--color-text-muted)', fontSize: 'var(--text-sm)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}
+        >
+          {result.profile.industry} 
+          {result.profile.decisionAutonomy > 3 ? ' • High Autonomy' : ''}
+          {result.profile.aiUsage > 3 ? ' • AI Integrated' : ''}
+          {result.profile.humanInteraction > 3 ? ' • High Collaboration' : ''}
+        </motion.div>
+      )}
+
       {/* 2-Column Grid for Score & Chart */}
       <div className={styles.topGrid}>
         <motion.div 

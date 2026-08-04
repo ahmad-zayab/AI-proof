@@ -1,0 +1,1820 @@
+{
+    "universal_core": [
+        {
+            "id": "u1",
+            "question": "Your boss suddenly moves you to a completely different job you know nothing about. What is your first step?",
+            "options": [
+                {
+                    "text": "Wait for my boss to tell me what to do.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Look up basic words about the new job online.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Talk to the people who actually know how things work around here.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u2",
+            "question": "A new computer system does your work perfectly but makes tiny, hard-to-see mistakes. How do you handle this?",
+            "options": [
+                {
+                    "text": "Trust the system so I can work much faster.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Check the work randomly to catch obvious errors.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Change my routine to focus only on fixing tricky errors and using my judgment.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u3",
+            "question": "You notice the reports say everything is fine, but the people around you seem unhappy. What do you trust?",
+            "options": [
+                {
+                    "text": "Trust the past numbers because math is reliable.",
+                    "ai_proof_weight": 0.2
+                },
+                {
+                    "text": "Mix different facts to find a middle ground.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Trust my gut and personal connections over the numbers.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u4",
+            "question": "A big project is due, but your main tool you need suddenly breaks. How do you react?",
+            "options": [
+                {
+                    "text": "Tell the customer it will be late and wait for the system to work.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Find a slow, manual way to finish part of the project.",
+                    "ai_proof_weight": 0.6
+                },
+                {
+                    "text": "Call the customer to talk about the main goal instead of sending a finished file.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u5",
+            "question": "A new coworker keeps making a tricky mistake that is not in the training manual. How do you fix it?",
+            "options": [
+                {
+                    "text": "Tell them to go read the rulebook again.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Write out a new, detailed checklist just for this task.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Work closely with them to show why the mistake happens in the real world.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u6",
+            "question": "Your workplace changes entirely, and your current job is no longer needed. How do you keep a job?",
+            "options": [
+                {
+                    "text": "Wait for my boss to tell me what to do next.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Remind people how good I am at using certain computer programs.",
+                    "ai_proof_weight": 0.3
+                },
+                {
+                    "text": "Find the biggest new problem at work and offer to solve it.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u7",
+            "question": "Two bosses are fighting over what to do next, and both have facts to prove they are right. How do you help?",
+            "options": [
+                {
+                    "text": "Put all their facts in a file and let them figure it out.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Use a math formula to score both ideas and pick the winner.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Talk to them privately to understand their feelings and help them agree.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u8",
+            "question": "You have to decide if a brand new idea will work, but nobody has ever tried it before. What do you do?",
+            "options": [
+                {
+                    "text": "Say it is too risky because there are no facts to look at.",
+                    "ai_proof_weight": 0.2
+                },
+                {
+                    "text": "Look at similar ideas in other fields to guess what might happen.",
+                    "ai_proof_weight": 0.6
+                },
+                {
+                    "text": "Try a very small, real-world test to see how people actually react.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u9",
+            "question": "A computer alarm says you must stop working immediately, but your gut says the alarm is wrong. What do you do?",
+            "options": [
+                {
+                    "text": "Follow the rules and stop working right away.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Stop for a minute to run another computer check.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Ignore the alarm based on things the computer cannot see, and take the blame if you are wrong.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u10",
+            "question": "Your team is working under extreme stress, and everyone is ready to quit. How do you step in?",
+            "options": [
+                {
+                    "text": "Send a positive email and remind them about the deadline.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Use a scheduling tool to spread the work out more evenly.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Talk to each person privately to calm them down and build trust.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u11",
+            "question": "You realize the main way your company decides if the business is doing well is actually hurting the business. What do you do?",
+            "options": [
+                {
+                    "text": "Keep working to hit the goal because that is how I get paid.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Write a report about why the math is wrong and give it to the boss.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Gather a group of coworkers to push for a totally new way of measuring success.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u12",
+            "question": "A customer asks you to do something that is legal but generally frowned upon in your trade. How do you answer?",
+            "options": [
+                {
+                    "text": "Do exactly what they ask since it is not against the rules.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Warn them it is unusual and ask if they are sure.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Refuse or change the request to protect their reputation in the long run.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u13",
+            "question": "You need help from several people, but everyone is too busy to help you. What do you do?",
+            "options": [
+                {
+                    "text": "Set up an automatic email reminder to bother them until they do it.",
+                    "ai_proof_weight": 0.2
+                },
+                {
+                    "text": "Tell a big boss to force everyone to help.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Use personal friendships to get them on your side so they want to help.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u14",
+            "question": "A new tool comes out that can do most of your daily work for you. What is your plan?",
+            "options": [
+                {
+                    "text": "Ignore it until my boss forces me to use it.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Learn the tool so I can finish my normal work much faster.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Master the tool and move into a higher role that the tool cannot do.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u15",
+            "question": "A supplier delivers great results on paper, but they are rude and make your team miserable. What do you do?",
+            "options": [
+                {
+                    "text": "Keep using them because their numbers are so good.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Send them an official warning about their bad attitude.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "End the deal because a happy team is more important than cheap results.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u16",
+            "question": "A smart tool you use slowly starts giving bad advice that feels wrong, even though it passes all the checks. What do you do?",
+            "options": [
+                {
+                    "text": "Keep using it since it is not showing any error messages.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Report a bug to the tech team and wait for a fix.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Create a new manual step to check the tool's work using your own experience.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u17",
+            "question": "A very important customer is completely wrong, but telling them bluntly will embarrass them and ruin the deal. What do you do?",
+            "options": [
+                {
+                    "text": "Send them the hard facts proving they are wrong.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Write a gentle email hoping they figure out the mistake on their own.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Have a caring private chat to guide them to the right answer while protecting their pride.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u18",
+            "question": "Computers now do all the easy beginner tasks. How do you train a brand new worker?",
+            "options": [
+                {
+                    "text": "Give them the training manuals and some videos to watch.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Have them read what the computer outputs so they know what good work looks like.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Have them shadow you closely and let them help make tough decisions.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u19",
+            "question": "A natural disaster ruins your delivery routes, and your computer maps freeze up. What do you do?",
+            "options": [
+                {
+                    "text": "Stop everything and wait for tech support to fix the maps.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Use the last route the computer gave you and hope for the best.",
+                    "ai_proof_weight": 0.3
+                },
+                {
+                    "text": "Grab a phone, call your friends on the road, and figure out a messy but safe new path.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u20",
+            "question": "A new law passes that makes all your normal work rules illegal, but the law is very confusing. What do you do?",
+            "options": [
+                {
+                    "text": "Wait for the legal team to write a new rulebook.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Look at what rival companies are doing and copy them.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Figure out what the law actually wants and design a brand new way to work.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u21",
+            "question": "You are given money to fix a big problem, but nobody actually knows what is causing it. What do you do?",
+            "options": [
+                {
+                    "text": "Spend the money on the most obvious issue and hope it helps.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Divide the money to try and fix a little bit of everything.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Hold onto the money and do fast, cheap tests with people to find the real cause.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u22",
+            "question": "Your team speaks three different languages, and a computer translator keeps messing up the tone of their messages. What do you do?",
+            "options": [
+                {
+                    "text": "Tell everyone to speak in very basic, plain words only.",
+                    "ai_proof_weight": 0.2
+                },
+                {
+                    "text": "Pay for a more expensive computer translator.",
+                    "ai_proof_weight": 0.3
+                },
+                {
+                    "text": "Bring people together for a video call to build real trust and clear up hurt feelings.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u23",
+            "question": "A computer program finds a legal trick to make 20% more money, but it might make customers hate you. What do you do?",
+            "options": [
+                {
+                    "text": "Do it right away because making money is the top goal.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Do it, but keep it hidden so nobody gets mad.",
+                    "ai_proof_weight": 0.2
+                },
+                {
+                    "text": "Say no because keeping your good name is worth more than a quick buck.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u24",
+            "question": "A new invention makes what you sell completely useless overnight. How do you survive?",
+            "options": [
+                {
+                    "text": "Fire people to save money and keep selling the old thing as long as possible.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Read history books to see what other companies did in the past.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Use your imagination to invent a totally new thing that nobody has ever seen.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u25",
+            "question": "You are hiring someone who passed every test perfectly, but their attitude gives you a really bad feeling. What do you do?",
+            "options": [
+                {
+                    "text": "Hire them anyway because their test scores are perfect.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Make them take one more hard test just to be sure.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Do not hire them, trusting your gut feeling about how they treat people.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u26",
+            "question": "Work is getting done faster than ever, but your coworkers are quitting in droves. The computer says everything is fine.",
+            "options": [
+                {
+                    "text": "Assume it is just a weird coincidence and do nothing.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Send out an anonymous survey with multiple-choice questions.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Have quiet, honest talks with people who are leaving to find out who is causing trouble.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u27",
+            "question": "You need a supplier to do a huge favor for you that is not in their contract. What do you do?",
+            "options": [
+                {
+                    "text": "Fill out an official help ticket on their website.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Offer to pay them extra money to do the work.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Call in a personal favor because you have been friendly with them for years.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u28",
+            "question": "A computer program you use starts unfairly rejecting applications from a certain group of people. What do you do?",
+            "options": [
+                {
+                    "text": "Keep using it because the bosses bought it.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Try to manually tweak the numbers to make it fairer.",
+                    "ai_proof_weight": 0.5
+                },
+                {
+                    "text": "Stop using it immediately, tell the bosses it is wrong, and change how you judge people.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u29",
+            "question": "A great worker suffers a terrible family tragedy and stops doing any work right before a big deadline. What do you do?",
+            "options": [
+                {
+                    "text": "Punish them for missing their work goals.",
+                    "ai_proof_weight": 0.0
+                },
+                {
+                    "text": "Let a computer program do their work for a while.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Do their work yourself, protect their job, and offer them a shoulder to cry on.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        },
+        {
+            "id": "u30",
+            "question": "Your entire trade changes so much that the old words and rules do not make sense anymore. What do you do?",
+            "options": [
+                {
+                    "text": "Keep using the old words and hope things go back to normal.",
+                    "ai_proof_weight": 0.1
+                },
+                {
+                    "text": "Start using whatever new slang you read online.",
+                    "ai_proof_weight": 0.4
+                },
+                {
+                    "text": "Invent a totally new way to talk about the work and teach it to your friends.",
+                    "ai_proof_weight": 1.0
+                }
+            ]
+        }
+    ],
+    "task_specific": {
+        "text_generation": [
+            {
+                "id": "t_tg1",
+                "question": "When you write an email, report, or letter, where do you get your information?",
+                "options": [
+                    {
+                        "text": "I take existing facts and put them into nice sentences.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I mix company numbers with things I look up online.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I talk to people and use behind-the-scenes, unwritten knowledge to tell a story.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg2",
+                "question": "How often do you have to worry about hurting feelings, breaking rules, or playing office politics when you write?",
+                "options": [
+                    {
+                        "text": "Almost never. I just write down plain facts.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Sometimes. I have to make sure I sound professional.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "All the time. One wrong word could cause a huge disaster or get us sued.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg3",
+                "question": "When you check someone else's writing, what is your biggest fix?",
+                "options": [
+                    {
+                        "text": "I fix spelling, grammar, and messy formatting.",
+                        "ai_proof_weight": 0.0
+                    },
+                    {
+                        "text": "I make sure the sentences make sense and flow nicely.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I point out the hidden, real-world context they completely forgot to mention.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg4",
+                "question": "How different does every piece of writing look from the one before it?",
+                "options": [
+                    {
+                        "text": "They all look the same. I just fill in the blanks on a form.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Somewhat different. I tweak old templates to fit new topics.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "Completely unique. I have to invent a brand new style for every single person I write to.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg5",
+                "question": "What happens if you write down something that sounds true but is actually a lie?",
+                "options": [
+                    {
+                        "text": "It is annoying, but easy to fix without much trouble.",
+                        "ai_proof_weight": 0.2
+                    },
+                    {
+                        "text": "It confuses people at work and I have to apologize.",
+                        "ai_proof_weight": 0.6
+                    },
+                    {
+                        "text": "My company gets sued, loses a lot of money, or loses a major customer.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg6",
+                "question": "When you are writing to the public during a huge, scary emergency, what is your main focus?",
+                "options": [
+                    {
+                        "text": "Making sure everything is spelled perfectly.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Putting the facts into a standard apology letter.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "Carefully balancing the right emotions to calm people down without accidentally getting your company in trouble.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg7",
+                "question": "If a computer writes your first draft, what do you spend the most time doing next?",
+                "options": [
+                    {
+                        "text": "I just send it exactly how the computer wrote it.",
+                        "ai_proof_weight": 0.0
+                    },
+                    {
+                        "text": "I change a few words so it sounds more like me.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "I rewrite huge chunks because the computer completely missed the real-world meaning.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg8",
+                "question": "Your boss tells you to write something that sounds 'tough but sweet.' How do you do that?",
+                "options": [
+                    {
+                        "text": "I ask them to just give me the exact words they want.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I use a dictionary to find better describing words.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I read their mind to figure out what they actually want, and invent a clever way to say it.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg9",
+                "question": "You are writing a summary using three books that completely disagree with each other. What do you do?",
+                "options": [
+                    {
+                        "text": "I just list what all three say and refuse to pick a side.",
+                        "ai_proof_weight": 0.2
+                    },
+                    {
+                        "text": "I try to blend them together to find a happy middle ground.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I figure out which book is lying and write a strong argument proving why.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_tg10",
+                "question": "A client tells you they just 'hate the vibe' of what you wrote. How do you fix it?",
+                "options": [
+                    {
+                        "text": "I ask them to only point out spelling or fact errors.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I write five totally different versions and make them pick one.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I figure out what is secretly bothering them and change the hidden meaning of my words.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            }
+        ],
+        "data_analysis": [
+            {
+                "id": "t_da1",
+                "question": "When you report how things are going to your boss, what takes the most work?",
+                "options": [
+                    {
+                        "text": "Cleaning up the math and making the graphs look pretty.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Writing a paragraph about what happened in the past.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "Arguing that the numbers are wrong because of real-world messy stuff.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da2",
+                "question": "What do you do when half of your numbers are missing or make no sense?",
+                "options": [
+                    {
+                        "text": "I throw out the bad numbers and wait for better ones.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I use a math formula to guess what the missing numbers should be.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I use my street smarts and experience to figure out the real story behind the missing facts.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da3",
+                "question": "What is the main goal of you looking at all these numbers?",
+                "options": [
+                    {
+                        "text": "Making daily charts and basic progress reports.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Finding patterns to try and guess what will happen next.",
+                        "ai_proof_weight": 0.6
+                    },
+                    {
+                        "text": "Helping the boss make a huge, scary choice that no computer could ever predict.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da4",
+                "question": "How often do you have to invent a new way to keep score because the old way is broken?",
+                "options": [
+                    {
+                        "text": "Never. The boss tells me exactly what to count.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Sometimes, like when we sell a brand new item.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "All the time. My main job is taking confusing real life and finding a way to count it.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da5",
+                "question": "A computer spits out a perfect math prediction, but your gut says it is completely wrong. What do you do?",
+                "options": [
+                    {
+                        "text": "Trust the computer because human feelings make mistakes.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Check the math again using a different computer program.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "Throw out the computer's guess because I know a secret real-world detail the computer does not.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da6",
+                "question": "Your company starts selling something totally new, and there are no past numbers to look at. How do you guess sales?",
+                "options": [
+                    {
+                        "text": "I say it is impossible to guess until we sell for a year.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I look at similar items and pretend ours will act the same.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I build a brand new guess from scratch using my knowledge of how real humans behave.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da7",
+                "question": "A computer proves you can save money by throwing away a famous item you sell. What do you do?",
+                "options": [
+                    {
+                        "text": "I tell the boss to throw it away immediately.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I just show the math to the boss and let them decide.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I ignore the computer because I know having that item makes our customers happy and loyal.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da8",
+                "question": "Your math shows that the boss's favorite idea is losing tons of money. How do you tell them?",
+                "options": [
+                    {
+                        "text": "I email them the spreadsheet and let the numbers speak for themselves.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I write a polite note saying the trend looks bad.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I carefully talk to them in person, finding a gentle way to help them change their mind without embarrassment.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da9",
+                "question": "When you organize a lot of numbers, what is the hardest part?",
+                "options": [
+                    {
+                        "text": "Fixing typing errors and making the software run.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Making sure two different lists of information match up.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "Turning messy, weird human behavior into neat little checkboxes.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_da10",
+                "question": "If you work in a strict field like banking or medicine, how do you handle computer math?",
+                "options": [
+                    {
+                        "text": "I trust it blindly because computers are better at math than I am.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I randomly check a few answers just to be safe.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I manually check every single answer because a mistake could put someone in jail or hurt them.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            }
+        ],
+        "visual_creation": [
+            {
+                "id": "t_vc1",
+                "question": "How do you know what to draw, paint, or design?",
+                "options": [
+                    {
+                        "text": "Someone gives me a very strict list of exactly what to draw.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I get a rough idea and keep changing it until the customer is happy.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I invent a brand new visual idea that solves a deep, emotional problem.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc2",
+                "question": "How much do you work with real-world, physical stuff you can touch?",
+                "options": [
+                    {
+                        "text": "None. I only make things on a computer screen.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "A little. Sometimes I get my computer files ready to be printed on paper.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "A lot. I design things for messy real-world spaces, weird packages, or tricky physical shapes.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc3",
+                "question": "A customer says your art 'just feels wrong' but cannot explain why. How do you fix it?",
+                "options": [
+                    {
+                        "text": "I make them fill out a strict checklist of what they want.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I quickly make twenty random versions and hope they like one.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I talk to them to uncover their deep, hidden fears about how the art looks.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc4",
+                "question": "What takes up the most time when you make art or designs?",
+                "options": [
+                    {
+                        "text": "Resizing images, cutting out backgrounds, and saving files.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Mixing colors, fixing the lighting, and making it look pretty.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "Coming up with the big, brilliant idea and convincing stubborn bosses to use it.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc5",
+                "question": "How much do you have to worry about local slang, inside jokes, or offending people with your art?",
+                "options": [
+                    {
+                        "text": "Not at all. I just make plain, simple instruction signs.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "A little. I want to make sure it looks modern and trendy.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "It is everything. My art has to carefully dodge sensitive topics and speak to very specific groups of people.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc6",
+                "question": "You are designing a sign that will sit outside in the real world. How do you plan for bad weather or crowds?",
+                "options": [
+                    {
+                        "text": "I just draw it on my computer and let the builders figure the rest out.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I use a 3D computer program to guess what the sun and rain will do.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I use my real-world experience with wood, metal, and human crowds to make it tough.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc7",
+                "question": "A huge news story breaks overnight, making your current advertising look incredibly offensive. What do you do?",
+                "options": [
+                    {
+                        "text": "Wait for the boss to tell me to take the ads down.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Quickly swap the pictures out for boring, safe stock photos.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "Feel the mood of the country and instantly pitch a totally new, brilliant idea that fits the moment.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc8",
+                "question": "Do you have to tell real humans what to do for your art, like in photography or film?",
+                "options": [
+                    {
+                        "text": "No, I only use computer graphics or AI pictures.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Sometimes, but usually just by sending them a list of instructions online.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "Yes. I have to calm down nervous actors, boost energy on set, and read people's emotions.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc9",
+                "question": "A computer draws a totally perfect, beautiful picture, but it feels 'fake' and lacks soul.",
+                "options": [
+                    {
+                        "text": "I use it anyway because it was fast and looks perfect.",
+                        "ai_proof_weight": 0.0
+                    },
+                    {
+                        "text": "I put a quick color filter on it to make it look a little less perfect.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "I throw it in the trash and draw it myself so it feels real, messy, and human.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_vc10",
+                "question": "You have to design a new logo for two angry companies that were just forced to merge together.",
+                "options": [
+                    {
+                        "text": "I just pick some modern colors and make the old logo look flatter.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I make two logos and let customers vote on which one they like best.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I play peacemaker between the angry bosses and design a logo that magically makes everyone happy.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            }
+        ],
+        "people_management": [
+            {
+                "id": "t_pm1",
+                "question": "What is your main job as a boss or manager?",
+                "options": [
+                    {
+                        "text": "Checking timecards and making sure people are doing their assigned chores.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Checking the quality of the work and making the daily routine faster.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "Stopping fights, keeping people happy, and helping workers grow into better people.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm2",
+                "question": "How do you decide if your workers are doing a good job?",
+                "options": [
+                    {
+                        "text": "I only look at the hard numbers of how much work they finished.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I look at their numbers and read the surveys their coworkers wrote about them.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I watch how they handle stress, make tough choices, and cheer up the team.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm3",
+                "question": "When you have to enforce a huge, terrible new rule at work, what is the hardest part?",
+                "options": [
+                    {
+                        "text": "Updating the rulebooks and changing passwords on the computers.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Making a slideshow to explain the logic behind the new rule.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "Handling angry, crying workers and keeping them from quitting.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm4",
+                "question": "How do you train a brand new worker?",
+                "options": [
+                    {
+                        "text": "I point them to a handbook and tell them to read it.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I give them easy chores and check them for mistakes later.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I throw them into messy, real-world problems and coach them through it.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm5",
+                "question": "A computer proves that firing a certain worker will make the team 15% faster, but you know that worker makes everyone smile. What do you do?",
+                "options": [
+                    {
+                        "text": "I fire them right away because speed is the only thing that matters.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I try to move them to a different department to save their job.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I refuse to fire them because making the team happy is worth more than speed.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm6",
+                "question": "Computers now do all the boring chores your newest workers used to do. How do you keep them employed?",
+                "options": [
+                    {
+                        "text": "I don't. I just fire them and let the computer do it.",
+                        "ai_proof_weight": 0.0
+                    },
+                    {
+                        "text": "I keep them around just to watch the computer for mistakes.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I change their job entirely, having them talk to clients and solve hard problems immediately.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm7",
+                "question": "Your team works from home and gets a lot done, but you can feel they are lonely and sad. What do you do?",
+                "options": [
+                    {
+                        "text": "I ignore it. As long as the work gets done, who cares?",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I force everyone to join a fun video call on Friday afternoon.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I call each person privately to see how they are really feeling and rebuild our friendship.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm8",
+                "question": "Two groups of workers you manage are in a vicious fight over who gets to control a new project. What do you do?",
+                "options": [
+                    {
+                        "text": "I let them fight it out and just reward whoever wins.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I look at the official rulebook and draw a strict line between them.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I act like a peacekeeper, soothing their bruised egos and getting them to work together.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm9",
+                "question": "Your best worker is getting everything done perfectly, but they look exhausted and near a breakdown. What do you do?",
+                "options": [
+                    {
+                        "text": "I praise them for working so hard and tell them to keep it up.",
+                        "ai_proof_weight": 0.0
+                    },
+                    {
+                        "text": "I send them an email with tips on how to relax at home.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "I force them to take a break and take some of their work away to protect their health.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pm10",
+                "question": "A computer wants you to assign work in a way that's super fast but kills your workers' chance of getting promoted.",
+                "options": [
+                    {
+                        "text": "I do what the computer says because speed is king.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I do it, but I promise the team I will try to help them get promoted later.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I refuse the computer's plan because helping my workers build a real career is more important.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            }
+        ],
+        "customer_interaction": [
+            {
+                "id": "t_ci1",
+                "question": "What do you usually talk about with your customers?",
+                "options": [
+                    {
+                        "text": "I just answer basic questions and ring up their orders.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I follow a troubleshooting guide to help them fix a broken item.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I calm down screaming customers or negotiate massive, tricky deals.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci2",
+                "question": "A customer demands something that is literally impossible. How do you fix it?",
+                "options": [
+                    {
+                        "text": "I read them the store rule that says no.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I offer them a coupon or a different item instead.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I figure out why they are secretly scared or angry, and fix that deep emotional problem.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci3",
+                "question": "How much does your natural charm and trustworthiness matter for your job?",
+                "options": [
+                    {
+                        "text": "Very little. I just ring them up quickly and accurately.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Somewhat. Smiling and being polite gets me better ratings.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "It is everything. Customers only buy from me because we have been friends for years.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci4",
+                "question": "How easy is it to guess what your customers are going to say next?",
+                "options": [
+                    {
+                        "text": "Very easy. They almost always say the exact same things every day.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Mostly easy. Sometimes they throw a weird question at me.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "Impossible. I have to read their face and change my attitude every single second.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci5",
+                "question": "How much power do you have to bend the rules for a customer?",
+                "options": [
+                    {
+                        "text": "None at all. I have to read the script exactly as written.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I can bend the rules a little bit, like offering a small refund.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "Complete power. I act as their trusted partner and make huge choices on their behalf.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci6",
+                "question": "A customer is screaming because your company's computer made a promise you cannot keep. What do you do?",
+                "options": [
+                    {
+                        "text": "I blame the computer and tell them there is nothing I can do.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I offer a basic apology and fill out a tech support ticket.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I let them yell, take personal blame for the mess, and invent a custom fix just for them.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci7",
+                "question": "Your company builds a computer chat bot that answers 90% of customer questions instantly. What happens to you?",
+                "options": [
+                    {
+                        "text": "I lose my job.",
+                        "ai_proof_weight": 0.0
+                    },
+                    {
+                        "text": "I just spend all day answering the 10% of questions the robot cannot handle.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I stop answering basic questions and focus on building deep, powerful friendships with my most important customers.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci8",
+                "question": "You are talking to a customer from a different culture where the word 'yes' actually means 'maybe.' How do you close the deal?",
+                "options": [
+                    {
+                        "text": "I assume they mean exactly what they said and send the bill.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I send them five emails asking them to please be more clear.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "I look them in the eye, read their body language, and figure out what they are really thinking.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci9",
+                "question": "A customer suddenly gets violent or starts threatening you. What do you do?",
+                "options": [
+                    {
+                        "text": "I hit the panic button and hide until security comes.",
+                        "ai_proof_weight": 0.2
+                    },
+                    {
+                        "text": "I try to read the safety script my boss gave me.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I use street smarts and calm talking to de-escalate the danger right there on the spot.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_ci10",
+                "question": "You have to convince a stubborn customer to buy a crazy new idea that has no proof it works. What do you do?",
+                "options": [
+                    {
+                        "text": "I give up because customers only buy things they can see.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I show them some basic math from a different business and hope they buy it.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I use my charm, tell a great story, and use our friendship to make them take a leap of faith.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            }
+        ],
+        "physical_labor": [
+            {
+                "id": "t_pl1",
+                "question": "How neat and predictable is the physical place where you work?",
+                "options": [
+                    {
+                        "text": "Very neat and the same every day, like a factory or a warehouse.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "Mostly neat, but sometimes I have to step around a mess.",
+                        "ai_proof_weight": 0.6
+                    },
+                    {
+                        "text": "Completely crazy and changing every day, like a construction site or the deep woods.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl2",
+                "question": "Are the things you touch and build with exactly the same every time?",
+                "options": [
+                    {
+                        "text": "Yes, they are completely identical every single day.",
+                        "ai_proof_weight": 0.2
+                    },
+                    {
+                        "text": "Mostly. I work with a few different standard parts.",
+                        "ai_proof_weight": 0.6
+                    },
+                    {
+                        "text": "No. I work with fragile, weird, or broken things that feel different every time I touch them.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl3",
+                "question": "When a machine breaks down, how do you figure out what is wrong?",
+                "options": [
+                    {
+                        "text": "I read the error screen and replace the part it tells me to.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "I look at the rulebook and run a few standard tests.",
+                        "ai_proof_weight": 0.6
+                    },
+                    {
+                        "text": "I listen to the engine's rattle or feel the pipe's vibration to find a problem the manual missed.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl4",
+                "question": "Do you have to take care of real humans while you do your physical work?",
+                "options": [
+                    {
+                        "text": "No, I only work with tools, boxes, or machines.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "Sometimes I have to share my workspace with a coworker.",
+                        "ai_proof_weight": 0.6
+                    },
+                    {
+                        "text": "Yes, absolutely. I physically lift, feed, or heal human beings every day.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl5",
+                "question": "If a robot tried to do your job, why would it fail?",
+                "options": [
+                    {
+                        "text": "It wouldn't fail; it would be much faster and stronger than me.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "It would have a hard time rolling around the messy floor.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "It lacks the gentle touch and quick reflexes to handle totally unexpected accidents safely.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl6",
+                "question": "You notice a tiny crack or weird color in the wood or metal you are working with that is not in the manual. What do you do?",
+                "options": [
+                    {
+                        "text": "I ignore it. If it is not in the book, I do not care.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I take a picture of it and ask my boss what to do.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I use my years of touching this stuff to instantly know if it will break, and I stop working.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl7",
+                "question": "How often do you have to build a homemade tool on the spot to finish a job?",
+                "options": [
+                    {
+                        "text": "Never. If I do not have the exact right tool, I go home.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Rarely. I might use some duct tape in a pinch.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "All the time. I constantly have to invent weird, clever fixes using whatever junk is lying around.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl8",
+                "question": "You are in the middle of lifting something huge, doing surgery, or running a stage play when the lights go completely black. What do you do?",
+                "options": [
+                    {
+                        "text": "I freeze and wait for the backup lights to come on.",
+                        "ai_proof_weight": 0.2
+                    },
+                    {
+                        "text": "I grab a flashlight and follow the emergency checklist step by step.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I use hand signals and deep trust in my team to safely lower the object in pitch darkness.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl9",
+                "question": "How important is it for you to notice when a human being is secretly in pain?",
+                "options": [
+                    {
+                        "text": "Not important at all. I do not work with people.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I would notice if my coworker was bleeding.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "Extremely important. I constantly watch how people breathe or flinch to see if they are hurt.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_pl10",
+                "question": "If your workspace gets completely rearranged every single day, what happens?",
+                "options": [
+                    {
+                        "text": "I cannot do any work until everything is put back perfectly.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "It slows me down a lot because I have to relearn where things are.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "That is totally normal. I easily dodge new obstacles and adapt on the fly.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            }
+        ],
+        "strategic_research": [
+            {
+                "id": "t_sr1",
+                "question": "When you finish a big research project, what do you hand in to the boss?",
+                "options": [
+                    {
+                        "text": "A short list of the basic facts I found online.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "A chart showing the pros and cons of two different ideas.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "A brand new idea that could change how we do everything.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr2",
+                "question": "You find two very famous experts who totally disagree with each other. What do you do?",
+                "options": [
+                    {
+                        "text": "I write down both of their ideas and let the boss decide.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I believe the one who wrote their article most recently.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "I dig into who is paying these experts to figure out which one is lying for money.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr3",
+                "question": "Where do you find your best, most secret facts?",
+                "options": [
+                    {
+                        "text": "I just use Google and read free articles.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I read paid expert articles that most people don't have access to.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I buy people coffee and listen to the juicy rumors they only say off the record.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr4",
+                "question": "What happens if your research is completely wrong?",
+                "options": [
+                    {
+                        "text": "I just fix the typo on the next page.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "We misunderstand what customers want for a few weeks.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "The company goes bankrupt, gets sued by the government, or ends up on the news.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr5",
+                "question": "How often do you have to guess what will happen in a crazy future that looks nothing like the past?",
+                "options": [
+                    {
+                        "text": "Almost never. I just look at old history that does not change.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Sometimes. I look at old numbers and assume the future will act exactly the same.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "All the time. My whole job is using my gut to predict wild, unexpected changes.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr6",
+                "question": "If a computer writes an article, how do you know if it is telling the truth?",
+                "options": [
+                    {
+                        "text": "I assume it is true because the grammar is perfect.",
+                        "ai_proof_weight": 0.0
+                    },
+                    {
+                        "text": "I run it through another computer to check for lies.",
+                        "ai_proof_weight": 0.3
+                    },
+                    {
+                        "text": "I use my years of street smarts to instantly smell when the computer is making things up.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr7",
+                "question": "Your gut tells you the world is changing, but the math does not show it yet. What do you do?",
+                "options": [
+                    {
+                        "text": "I wait for the math to prove it before I say anything.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I hide a tiny warning at the very end of my report.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I bet my whole career on my gut feeling and scream at the boss to change course immediately.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr8",
+                "question": "You are asked to combine two things that have nothing to do with each other, like cooking and car repair. What do you do?",
+                "options": [
+                    {
+                        "text": "I say no because I only know about one of those things.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I write one page about cooking and one page about cars and staple them together.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I use my imagination to find crazy, brilliant connections between the two things.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr9",
+                "question": "How often does your research prove that your own boss is totally wrong?",
+                "options": [
+                    {
+                        "text": "Never. I only find facts that make the boss look smart.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "Sometimes, but only about tiny, unimportant details.",
+                        "ai_proof_weight": 0.5
+                    },
+                    {
+                        "text": "All the time. I am paid to be the brave person who tells the boss their favorite idea is stupid.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            },
+            {
+                "id": "t_sr10",
+                "question": "A million secret emails are leaked online. How do you find the best gossip?",
+                "options": [
+                    {
+                        "text": "I ask a computer to summarize the emails for me.",
+                        "ai_proof_weight": 0.1
+                    },
+                    {
+                        "text": "I just search the emails for my company's name.",
+                        "ai_proof_weight": 0.4
+                    },
+                    {
+                        "text": "I read between the lines to figure out what people are secretly afraid to say in writing.",
+                        "ai_proof_weight": 1.0
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,10 +1,10 @@
 export type CategoryId = 
-  | 'systemDesign' 
-  | 'fundamentals' 
-  | 'aiOrchestration' 
-  | 'debugging' 
-  | 'architecture' 
-  | 'communication' 
+  | 'ambiguity' 
+  | 'emotionalIntelligence' 
+  | 'strategicJudgment' 
+  | 'adaptability' 
+  | 'contextualNuance' 
+  | 'creativeSynthesis' 
   | 'domainExpertise';
 
 export interface Category {
@@ -15,22 +15,28 @@ export interface Category {
 }
 
 export interface Answer {
-  id: string;
   text: string;
-  scoreMap: Record<CategoryId, number>;
+  ai_proof_weight: number; // 0.0 to 1.0
 }
 
 export interface Question {
   id: string;
-  categoryId: CategoryId;
-  text: string;
-  answers: Answer[];
+  question: string;
+  options: Answer[];
+}
+
+export interface UserProfile {
+  industry: string;
+  primaryTasks: string[];
+  decisionAutonomy: number;
+  humanInteraction: number;
+  aiUsage: number;
 }
 
 export interface QuizState {
   currentStep: 'intro' | 'question' | 'calculating';
   currentQuestionIndex: number;
   answers: Record<string, string>; // questionId -> answerId
-  experienceLevel: string | null;
-  primaryRole: string | null;
+  profile: UserProfile | null;
+  questions: Question[];
 }

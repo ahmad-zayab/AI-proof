@@ -11,13 +11,13 @@ interface RadarChartProps {
 
 // Ensure strict typing matching the CategoryId
 const CATEGORIES: { id: CategoryId; label: string }[] = [
-  { id: 'systemDesign', label: 'System Design' },
-  { id: 'fundamentals', label: 'Fundamentals' },
-  { id: 'aiOrchestration', label: 'AI Skills' },
-  { id: 'debugging', label: 'Debugging' },
-  { id: 'architecture', label: 'Architecture' },
-  { id: 'communication', label: 'Communication' },
-  { id: 'domainExpertise', label: 'Domain' },
+  { id: 'ambiguity', label: 'Handling the Unknown' },
+  { id: 'emotionalIntelligence', label: 'People Skills' },
+  { id: 'strategicJudgment', label: 'Tough Choices' },
+  { id: 'adaptability', label: 'Adaptability' },
+  { id: 'contextualNuance', label: 'Reading the Room' },
+  { id: 'creativeSynthesis', label: 'Creative Thinking' },
+  { id: 'domainExpertise', label: 'Expert Knowledge' },
 ];
 
 const RADIUS = 130; // Fits well within a 400px viewBox with room for labels
