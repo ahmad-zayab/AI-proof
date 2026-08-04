@@ -26,7 +26,7 @@ export default function QuizLayout({ children }: { children: React.ReactNode }) 
           ← Back to Home
         </Link>
       </header>
-      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 'var(--space-sm) var(--space-md)', maxWidth: '650px', margin: '0 auto', width: '100%' }}>
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 var(--space-md)', maxWidth: '1440px', margin: '0 auto', width: '100%' }}>
         {children}
       </main>
     </div>

@@ -40,13 +40,10 @@ export const Footer: React.FC = () => {
               <a href="#" target="_blank" rel="noopener noreferrer">Buy Me a Coffee</a>
             </li>
             <li>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+              <a href="https://github.com/ahmad-zayab" target="_blank" rel="noopener noreferrer">GitHub</a>
             </li>
             <li>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </li>
-            <li>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/ahmad-zayab-26387b240/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </li>
           </ul>
         </div>
