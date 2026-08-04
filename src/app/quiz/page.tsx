@@ -4,7 +4,6 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuiz } from '@/hooks/useQuiz';
 import { QuizIntro, QuestionCard, QuizProgress, QuizComplete } from '@/components/quiz';
-import { QUESTIONS } from '@/lib/quiz-data';
 
 export default function QuizPage() {
   const {

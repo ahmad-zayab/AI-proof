@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { QuizState, UserProfile } from '@/types';
-import { QUESTIONS, generateQuiz } from '@/lib/quiz-data';
+import { generateQuiz } from '@/lib/quiz-data';
 import { calculateScore, encodeResultsToUrl } from '@/lib/scoring';
 
 const initialState: QuizState = {
@@ -16,6 +16,32 @@ export function useQuiz() {
   const [state, setState] = useState<QuizState>(initialState);
   const router = useRouter();
 
+  // On mount, check if we have saved state
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('quiz_state');
+      if (saved) {
+        try {
+          setState(JSON.parse(saved));
+        } catch (e) {
+          console.error('Failed to parse quiz_state', e);
+        }
+      }
+    }
+  }, []);
+
+  // Helper to update state (sessionStorage sync handled by useEffect below)
+  const setQuizState = (updater: React.SetStateAction<QuizState>) => {
+    setState(updater);
+  };
+
+  // Sync state to sessionStorage whenever it changes
+  useEffect(() => {
+    if (typeof window !== 'undefined' && state.currentStep !== 'intro') {
+      sessionStorage.setItem('quiz_state', JSON.stringify(state));
+    }
+  }, [state]);
+
   useEffect(() => {
     if (state.currentStep === 'calculating') {
       const timer = setTimeout(() => {
@@ -25,6 +51,11 @@ export function useQuiz() {
           state.profile
         );
         const encodedData = encodeResultsToUrl(result);
+        
+        if (typeof window !== 'undefined') {
+          sessionStorage.removeItem('quiz_state');
+        }
+        
         router.push(`/results?data=${encodedData}`);
       }, 2000); // 2 second delay to simulate "AI processing"
 
@@ -34,7 +65,14 @@ export function useQuiz() {
 
   const startQuiz = (profile: UserProfile) => {
     const generatedQuestions = generateQuiz(profile);
-    setState(prev => ({
+    
+    if (generatedQuestions.length === 0) {
+      console.error('Quiz generation failed: no questions returned');
+      // Stay on intro and don't transition to a broken state
+      return;
+    }
+    
+    setQuizState(prev => ({
       ...prev,
       profile,
       questions: generatedQuestions,
@@ -45,7 +83,7 @@ export function useQuiz() {
   };
 
   const answerQuestion = (questionId: string, answerId: string) => {
-    setState(prev => ({
+    setQuizState(prev => ({
       ...prev,
       answers: {
         ...prev.answers,
@@ -55,7 +93,7 @@ export function useQuiz() {
   };
 
   const nextQuestion = () => {
-    setState(prev => {
+    setQuizState(prev => {
       const isLastQuestion = prev.currentQuestionIndex >= prev.questions.length - 1;
       return {
         ...prev,
@@ -66,7 +104,7 @@ export function useQuiz() {
   };
 
   const previousQuestion = () => {
-    setState(prev => {
+    setQuizState(prev => {
       if (prev.currentQuestionIndex > 0) {
         return {
           ...prev,

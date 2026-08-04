@@ -15,9 +15,9 @@ const TASK_OPTIONS = [
   { id: 'data_analysis', label: 'Working with Numbers' },
   { id: 'visual_creation', label: 'Design & Visuals' },
   { id: 'people_management', label: 'Managing People' },
-  { id: 'customer_interaction', label: 'Talking to Customers' },
+  { id: 'customer_interaction', label: 'Dealing with Customers' },
   { id: 'physical_labor', label: 'Hands-on Work' },
-  { id: 'strategic_research', label: 'Research' }
+  { id: 'strategic_research', label: 'Research & Planning' }
 ];
 
 const INDUSTRIES = [

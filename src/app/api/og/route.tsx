@@ -3,6 +3,7 @@ import { decodeResultsFromUrl } from '@/lib/scoring';
 import { CATEGORIES } from '@/lib/quiz-data';
 
 export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
 
 function getScoreColor(score: number): string {
   if (score >= 80) return '#00b894'; // success (green)

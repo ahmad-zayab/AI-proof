@@ -4,6 +4,15 @@ import { CATEGORIES } from './quiz-data';
 // Helper to clamp scores between 0 and 100
 const clamp = (val: number) => Math.max(0, Math.min(100, Math.round(val)));
 
+// Simple string hash for URL integrity (not cryptographic, but much harder to spoof than modulo)
+function simpleHash(str: string): number {
+  let hash = 5381;
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) + hash + str.charCodeAt(i)) & 0xFFFFFFFF;
+  }
+  return Math.abs(hash) % 1000000; // 6-digit hash
+}
+
 export function calculateScore(
   answers: Record<string, string>, 
   questions: Question[],
@@ -13,42 +22,53 @@ export function calculateScore(
   let totalWeight = 0;
   let answeredCount = 0;
 
-  Object.entries(answers).forEach(([questionId, answerIndexStr]) => {
-    const question = questions.find(q => q.id === questionId);
-    if (!question) return;
+  const axes = [
+    'ambiguity',
+    'emotionalIntelligence',
+    'strategicJudgment',
+    'adaptability',
+    'contextualNuance',
+    'creativeSynthesis',
+    'domainExpertise'
+  ] as const;
 
-    const idx = parseInt(answerIndexStr, 10);
-    const option = question.options[idx];
-    if (option) {
-      totalWeight += option.ai_proof_weight;
-      answeredCount++;
-    }
-  });
+  const breakdown: Partial<ScoreBreakdown> = {};
 
-  // Calculate base score out of 100 (average of all answered ai_proof_weights)
-  const avgWeight = answeredCount > 0 ? totalWeight / answeredCount : 0;
-  const baseScore = avgWeight * 100;
-
-  // Use profile factors (1-5) to adjust the base score into 7 categories
-  // We center the factors around 3. If a factor is > 3, it's a bonus. If < 3, penalty.
   const aut = profile ? profile.decisionAutonomy - 3 : 0; // -2 to +2
   const hum = profile ? profile.humanInteraction - 3 : 0;
   const aiu = profile ? profile.aiUsage - 3 : 0;
 
-  // Add some random noise (-5 to +5) so the chart looks organic
-  const noise = () => (Math.random() * 10) - 5;
+  questions.forEach((question, index) => {
+    const axis = axes[index % 7];
+    const answerIndexStr = answers[question.id];
+    let weight = 0;
+    
+    if (answerIndexStr !== undefined) {
+      const idx = parseInt(answerIndexStr, 10);
+      const option = question.options[idx];
+      if (option) {
+        weight = option.ai_proof_weight;
+        totalWeight += weight;
+        answeredCount++;
+      }
+    }
+    
+    let score = weight * 100;
 
-  const breakdown: ScoreBreakdown = {
-    ambiguity: clamp(baseScore + (aut * 5) + noise()),
-    emotionalIntelligence: clamp(baseScore + (hum * 6) + noise()),
-    strategicJudgment: clamp(baseScore + (aut * 6) + noise()),
-    adaptability: clamp(baseScore + (aiu * 5) + noise()),
-    contextualNuance: clamp(baseScore + (hum * 5) + noise()),
-    creativeSynthesis: clamp(baseScore + (aiu * 6) + noise()),
-    domainExpertise: clamp(baseScore + (aut * 4) + noise()),
-  };
+    // Apply subtle modifiers based on profile
+    if (axis === 'ambiguity' || axis === 'strategicJudgment' || axis === 'domainExpertise') {
+      score += aut * 5;
+    } else if (axis === 'emotionalIntelligence' || axis === 'contextualNuance') {
+      score += hum * 5;
+    } else if (axis === 'adaptability' || axis === 'creativeSynthesis') {
+      score += aiu * 5;
+    }
 
-  const overallScore = Math.round(baseScore);
+    breakdown[axis] = clamp(score);
+  });
+
+  const avgWeight = answeredCount > 0 ? totalWeight / answeredCount : 0;
+  const overallScore = Math.round(avgWeight * 100);
 
   let level: QuizResult['level'] = 'Critical Alert';
   if (overallScore >= 85) level = 'Highly AI-Proof';
@@ -57,7 +77,7 @@ export function calculateScore(
 
   return {
     overallScore,
-    breakdown,
+    breakdown: breakdown as ScoreBreakdown,
     level,
     profile
   };
@@ -80,8 +100,7 @@ export function encodeResultsToUrl(result: QuizResult): string {
     params.set('p', btoa(pStr));
   }
 
-  const sum = scoresStr.split(',').reduce((acc, val) => acc + parseInt(val, 10), 0);
-  const checksum = sum % 256;
+  const checksum = simpleHash(scoresStr);
   params.set('c', checksum.toString());
 
   const finalString = params.toString();
@@ -105,8 +124,7 @@ export function decodeResultsFromUrl(encodedStr: string): QuizResult | null {
 
     if (!s || !c) return null;
 
-    const sum = s.split(',').reduce((acc, val) => acc + parseInt(val, 10), 0);
-    if (sum % 256 !== parseInt(c, 10)) return null;
+    if (simpleHash(s) !== parseInt(c, 10)) return null;
 
     const scores = s.split(',').map(Number);
     const overallScore = scores[0];

@@ -11,12 +11,12 @@ interface RadarChartProps {
 
 // Ensure strict typing matching the CategoryId
 const CATEGORIES: { id: CategoryId; label: string }[] = [
-  { id: 'ambiguity', label: 'Handling the Unknown' },
-  { id: 'emotionalIntelligence', label: 'People Skills' },
-  { id: 'strategicJudgment', label: 'Tough Choices' },
-  { id: 'adaptability', label: 'Adaptability' },
+  { id: 'ambiguity', label: 'Dealing with the Unknown' },
+  { id: 'emotionalIntelligence', label: 'Dealing with People' },
+  { id: 'strategicJudgment', label: 'Making Tough Choices' },
+  { id: 'adaptability', label: 'Adapting' },
   { id: 'contextualNuance', label: 'Reading the Room' },
-  { id: 'creativeSynthesis', label: 'Creative Thinking' },
+  { id: 'creativeSynthesis', label: 'Thinking Creatively' },
   { id: 'domainExpertise', label: 'Expert Knowledge' },
 ];
 
