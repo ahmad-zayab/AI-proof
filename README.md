@@ -1,61 +1,81 @@
-# AI Proof
+# AI-proof — Developer Technical Assessment Platform
 
-An interactive developer skill assessment that evaluates how resilient your engineering capabilities are against generative AI automation.
+[![CI Quality Gate](https://github.com/ahmad-zayab/AI-proof/actions/workflows/ci.yml/badge.svg)](https://github.com/ahmad-zayab/AI-proof/actions)
+![Next.js 14](https://img.shields.io/badge/Next.js-14.2-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?logo=typescript)
+![Vitest](https://img.shields.io/badge/Vitest-Automated_Tests-6E9F18?logo=vitest)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css)
 
-**Live Demo:** [aiproof-sage.vercel.app](https://aiproof-sage.vercel.app)
+> **Live Deployment:** [aiproof-sage.vercel.app](https://aiproof-sage.vercel.app)
 
----
-
-## Why AI Proof?
-
-Large language models and AI coding assistants excel at syntax completion, boilerplate generation, and routine CRUD functions. However, they consistently struggle with:
-- Distributed systems architecture and trade-off decisions.
-- Complex state synchronization and race conditions.
-- Real-world debugging across ambiguous production environments.
-- Business domain modeling and requirements translation.
-
-**AI Proof** puts developers through realistic architectural scenarios to measure high-leverage engineering intuition versus easily automatable syntax knowledge.
+An interactive, anti-cheat engineering assessment engine designed to benchmark software engineers across **React.js**, **Node.js**, **TypeScript**, and **Distributed System Design**. Engineered with Next.js App Router, real-time focus-loss detection, dynamic timing state machines, and automated Vitest/GitHub Actions CI test suites.
 
 ---
 
-## Key Features
+## Architecture Overview
 
-- **Interactive Scenario Assessments:** Real-world problem scenarios testing design decisions, concurrency handling, and debugging depth rather than trivia.
-- **Dynamic Skill Scoring:** Analyzes responses to deliver an individualized breakdown across architectural reasoning, system intuition, and automation vulnerability.
-- **Fluid Multi-Step Flow:** Step-by-step questionnaire transitions and micro-interactions built with **Framer Motion**.
-- **MDX-Driven Content Pipeline:** Question sets and technical explanations authored in MDX using `@next/mdx`, allowing structured rich text alongside interactive UI components.
-- **Responsive Dark/Light UI:** Clean typography and layout designed for quick mobile or desktop completion.
+```mermaid
+graph TD
+    User([Candidate]) -->|Interactive UI| App[Next.js App Router Client]
+    
+    subgraph Assessment Runtime
+        App --> HookTimer[useAssessmentTimer State Machine]
+        App --> HookCheat[useAntiCheat Focus-Loss Detector]
+        App --> Card[QuestionCard Accessible UI]
+    end
 
----
+    subgraph Evaluation Tier
+        Card --> Engine[Functional Scoring Calculator]
+        Engine --> CategoryEngine[Category Performance Matrix]
+        CategoryEngine --> ResultUI[ResultView Analytics Card]
+    end
 
-## Tech Stack
-
-| Layer | Technology |
-| :--- | :--- |
-| **Framework** | Next.js (App Router) |
-| **Language** | TypeScript |
-| **Animation** | Framer Motion |
-| **Content** | MDX (`@next/mdx`, `@mdx-js/react`) |
-| **Styling** | Vanilla CSS / Modular CSS |
-| **Deployment** | Vercel |
-
----
-
-## Project Structure
-ai-proof/ ├── src/ │ ├── app/ # Next.js App Router routes & layouts │ ├── components/ # UI components (Quiz cards, score displays, animations) │ └── content/ # MDX questions, scoring rubrics, and explanations ├── public/ # Static assets & icons ├── next.config.ts # Next.js & MDX configuration ├── tsconfig.json # Strict TypeScript configuration └── package.json
-
+    subgraph Continuous Integration
+        GitHub[GitHub Push / PR] --> Action[GitHub Actions CI Pipeline]
+        Action --> Typecheck[TypeScript Static Analysis]
+        Action --> Vitest[Vitest & JSDOM Unit Tests]
+    end
+```
 
 ---
 
-## Getting Started
+## Key Technical Highlights
 
-### Prerequisites
-- **Node.js** >= 18
-- **npm** or **pnpm**
+* **Pure Functional Scoring Engine:** Decoupled scoring logic calculating overall accuracy and granular category performance across React, Node, and TypeScript.
+* **Anti-Cheat Focus-Loss Detector:** `useAntiCheat` hook listening to `visibilitychange` events to prevent tab-switching during active assessments.
+* **Automated CI Quality Gate:** GitHub Actions pipeline executing `tsc --noEmit` and Vitest component specs with coverage reporting on every commit.
+* **Optimized Next.js Architecture:** Built with Next.js App Router, Tailwind CSS, and Radix UI primitives for sub-second page transitions.
 
-### Installation
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ahmad-zayab/AI-proof.git
-   cd AI-proof
+## Local Development & Test Execution
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Run Test Suite (Vitest)
+```bash
+npm run test
+```
+
+### 3. Run Typecheck & Lint
+```bash
+npm run typecheck
+npm run lint
+```
+
+### 4. Start Development Server
+```bash
+npm run dev
+```
+
+---
+
+## Author
+**Ahmad Zayab** — Full-Stack Software Engineer
+* Portfolio: [ahmadzayab.vercel.app](https://ahmadzayab.vercel.app)
+* GitHub: [@ahmad-zayab](https://github.com/ahmad-zayab)
+* LinkedIn: [linkedin.com/in/ahmad-zayab-26387b240](https://www.linkedin.com/in/ahmad-zayab-26387b240)
